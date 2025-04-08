@@ -11,6 +11,10 @@
             for(int i = 0; i < n; i++)
             {
                 file = Console.ReadLine();
+                if (file.Equals(""))
+                {
+                    break;
+                }
                 if (files.Contains(file))
                 {
                     Console.WriteLine("Repetition");
