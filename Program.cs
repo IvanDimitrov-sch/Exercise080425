@@ -4,7 +4,29 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int n = int.Parse(Console.ReadLine());
+            HashSet<string> files = new HashSet<string>();
+            Queue<string> queue = new Queue<string>();
+            string file;
+            for(int i = 0; i < n; i++)
+            {
+                file = Console.ReadLine();
+                if (files.Contains(file))
+                {
+                    Console.WriteLine("Repetition");
+                }
+                else
+                {
+                    files.Add(file);
+                    queue.Enqueue(file);
+                }        
+            }
+            Console.WriteLine("Result:\n");
+            foreach(string k in queue)
+            {
+                Console.WriteLine(k);
+            }
+            
         }
     }
 }
